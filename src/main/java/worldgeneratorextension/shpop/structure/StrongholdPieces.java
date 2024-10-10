@@ -11,6 +11,7 @@ import cn.nukkit.math.BlockVector3;
 import cn.nukkit.math.NukkitRandom;
 import cn.nukkit.nbt.tag.CompoundTag;
 import cn.nukkit.nbt.tag.ListTag;
+import cn.nukkit.utils.Hash;
 import worldgeneratorextension.global.block.state.*;
 import worldgeneratorextension.global.math.BoundingBox;
 import worldgeneratorextension.shpop.loot.StrongholdCorridorChest;
@@ -1476,6 +1477,11 @@ public class StrongholdPieces {
                         Server.getInstance().getScheduler().scheduleTask(new BlockActorSpawnTask(chunk.getProvider().getLevel(),
                                 BlockEntity.getDefaultCompound(vec.asVector3(), BlockEntity.MOB_SPAWNER)
                                         .putInt("EntityId", EntitySilverfish.NETWORK_ID)));
+                    }
+
+                    long portalHash = Hash.hashBlock(vec.x, vec.y, vec.z);
+                    if (!Server.getInstance().knownEndPortals.contains(portalHash)) {
+                        Server.getInstance().knownEndPortals.add(portalHash);
                     }
                 }
             }

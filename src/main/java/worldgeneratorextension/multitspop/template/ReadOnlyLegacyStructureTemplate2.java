@@ -7,7 +7,6 @@ import cn.nukkit.item.RuntimeItemMapping;
 import cn.nukkit.level.ChunkManager;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.format.FullChunk;
-import cn.nukkit.level.format.leveldb.structure.LevelDBChunk;
 import cn.nukkit.math.BlockVector3;
 import cn.nukkit.math.NukkitRandom;
 import cn.nukkit.math.Vector3;
@@ -102,7 +101,7 @@ public class ReadOnlyLegacyStructureTemplate2 extends AbstractLegacyStructureTem
 
     @Override
     public boolean placeInChunk(FullChunk chunk, NukkitRandom random, BlockVector3 position, StructurePlaceSettings settings) {
-        if (this.isInvalid() || this.size.getX() > 16 || this.size.getZ() > 16 || !(chunk instanceof LevelDBChunk)) {
+        if (this.isInvalid() || this.size.getX() > 16 || this.size.getZ() > 16) {
             return false;
         }
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>worldgeneratorextension</groupId>
     <artifactId>WorldGeneratorExtension</artifactId>
-    <version>1.5.0</version>
+    <version>1.5.0-IGN</version>
     <build>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <plugins>
@@ -96,10 +96,10 @@
     <dependencies>
         <dependency>
             <groupId>cn.nukkit</groupId>
-            <artifactId>Nukkit</artifactId>
+            <artifactId>NukkitX-IGN</artifactId>
             <version>PM1E</version>
             <scope>system</scope>
-            <systemPath>${basedir}/patched.jar</systemPath>
+            <systemPath>${basedir}/production.jar</systemPath>
         </dependency>
     </dependencies>
     <properties>
