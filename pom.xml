@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>worldgeneratorextension</groupId>
     <artifactId>WorldGeneratorExtension</artifactId>
-    <version>1.5.0-IGN</version>
+    <version>1.5.1-IGN</version>
     <build>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <plugins>
