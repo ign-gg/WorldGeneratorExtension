@@ -21,6 +21,7 @@ import worldgeneratorextension.nbpop.populator.PopulatorNetherFortress;
 import worldgeneratorextension.nbpop.structure.NetherBridgePieces;
 import worldgeneratorextension.ompop.populator.PopulatorOceanMonument;
 import worldgeneratorextension.pm1e.populator.*;
+import worldgeneratorextension.quasistructure.populator.PopulatorBeeNest;
 import worldgeneratorextension.quasistructure.populator.PopulatorDesertWell;
 import worldgeneratorextension.quasistructure.populator.PopulatorDungeon;
 import worldgeneratorextension.scatteredbuilding.populator.PopulatorDesertPyramid;
@@ -105,6 +106,7 @@ public class Loader extends PluginBase implements Listener {
         populatorsOverworld.add(new PopulatorDungeon());
         populatorsOverworld.add(new PopulatorCoralCrust());
         populatorsOverworld.add(new PopulatorTreasureChest());
+        populatorsOverworld.add(new PopulatorBeeNest());
         populatorsNether.add(new PopulatorNetherFortress());
         populatorsNether.add(new PopulatorNetherFossil());
 
