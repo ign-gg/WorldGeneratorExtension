@@ -20,7 +20,8 @@ public class BlockActorSpawnTask extends PluginTask<Plugin> {
 
     @Override
     public void onRun(int currentTick) {
-        BlockEntity.createBlockEntity(this.nbt.getString("id"),
-                this.level.getChunk(this.nbt.getInt("x") >> 4, this.nbt.getInt("z") >> 4), this.nbt);
+        level.threadedExecutor.execute(() ->
+                BlockEntity.createBlockEntity(this.nbt.getString("id"),
+                        this.level.getChunk(this.nbt.getInt("x") >> 4, this.nbt.getInt("z") >> 4), this.nbt));
     }
 }
